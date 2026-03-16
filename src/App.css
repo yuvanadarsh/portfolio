@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background-color: black; /* Or use @apply bg-black; */
+}
+
+body {
+  @apply text-white;
+  /* This ensures the background color is solid even if you scroll */
+  min-height: 100vh;
+}
+
+/* If there was a @media (prefers-color-scheme: dark) block here, 
+   that was the reason it stayed dark. Deleting it fixes the issue. */

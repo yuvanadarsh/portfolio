@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: black;
+}
+/* 
+@theme 
+  // This tells Tailwind: "Stop looking at the Mac OS settings!"
+  --dark-mode: class;
+}
+
+
+// Safety reset: This ensures that when .dark is NOT present, 
+// the background MUST be white. 
+:root {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+// When .dark is present, use your dark color 
+.dark {
+  background-color: #09090b !important; // zinc-950 
+  color: #ffffff !important;
+} */
