@@ -12,9 +12,9 @@ const Navbar = () => {
   ];
   return (
     <>
-      <nav className="bg-black text-white p-4 fixed w-full h-[60px] z-50">
+      <nav className="bg-black text-white p-4 fixed w-full h-20 z-50 md:flex">
         <div className="container mx-auto flex justify-between items-center">
-          <div className="text-2xl font-bold text-[#5F72FF]">
+          <div className="text-3xl font-bold text-[#5F72FF]">
             <a href="#">Yuvan</a>
           </div>
 

@@ -1,4 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --font-outfit: "outfit", sans-serif;
+}
+
+.card-base {
+  @apply border-2 border-white/10 rounded-2xl bg-white/5 
+           transition duration-200 ease-in-out 
+           hover:bg-white/10 hover:-translate-y-1.5 
+           flex flex-col gap-2.5 text-white;
+}
 
 html {
   scroll-behavior: smooth;
@@ -7,6 +19,7 @@ html {
 body {
   background-color: black;
 }
+
 /* 
 @theme 
   // This tells Tailwind: "Stop looking at the Mac OS settings!"
