@@ -127,8 +127,8 @@ function Nav() {
 function Hero() {
   const [ref, inView] = useInView(0.1);
   return (
-    <section id="hero" ref={ref} className={`min-h-screen flex items-center pt-16 px-6 transition-all duration-500 ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
-      <div className="max-w-5xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-12 py-16">
+    <section id="hero" ref={ref} className={`min-h-screen flex items-center px-6 transition-all duration-500 ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
+      <div className="max-w-5xl mx-auto w-full flex flex-col md:flex-row items-start justify-between gap-12 pt-[88px] pb-16">
         {/* Left */}
         <div className="flex-1 max-w-xl">
           <span className="inline-block bg-[#1e3a8a] text-[#bfdbfe] text-xs font-medium px-3 py-1.5 rounded-full mb-6">Open to Internships · Summer 2026</span>
@@ -170,7 +170,7 @@ function Hero() {
         </div>
 
         {/* Right — avatar placeholder */}
-        <div className="shrink-0 w-48 h-48 rounded-xl border-2 border-[#3b82f6] bg-[#262626] flex items-center justify-center">
+        <div className="shrink-0 w-40 h-40 rounded-xl border-2 border-[#3b82f6] bg-[#262626] flex items-center justify-center mt-1">
           <span className="text-[#3b82f6] text-4xl font-medium select-none">YA</span>
         </div>
       </div>
@@ -329,10 +329,21 @@ function Skills() {
           </div>
         </div>
 
-        {/* Education + Volunteering */}
+      </div>
+    </section>
+  );
+}
+
+/* ─── Education & Volunteering ───────────────────────────────────────── */
+function EducationVolunteering() {
+  const [ref, inView] = useInView(0.1);
+  return (
+    <section className="py-24 px-6">
+      <div className="max-w-5xl mx-auto">
+        <h2 className="text-2xl font-semibold text-white mb-12">Education & Volunteering</h2>
         <div
+          ref={ref}
           className={`grid grid-cols-1 md:grid-cols-2 gap-4 transition-all duration-500 ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
-          style={{ transitionDelay: "80ms" }}
         >
           <div className="bg-[#262626] border border-[#404040] rounded-xl p-6">
             <p className="text-[#a3a3a3] text-xs uppercase tracking-widest font-medium mb-3">Education</p>
@@ -469,6 +480,7 @@ export default function App() {
       <Experience />
       <Projects />
       <Skills />
+      <EducationVolunteering />
       <Blog />
       <Contact />
       <Footer />
